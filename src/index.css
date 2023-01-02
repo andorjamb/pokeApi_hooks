@@ -1,5 +1,29 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Laila&family=Days+One&family=Miniver&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+
+:root {
+
+  --royal-purple: rgb(69, 27, 80);
+  --deep-red: rgb(63, 3, 32);
+  --burnt-orange: rgb(255, 106, 0);
+  --eggplant: rgb(33, 12, 53);
+  --yellow: rgb(247, 224, 52);
+  --main-background-color: rgb(245, 245, 245);
+
+}
+
+* {
+  padding: 0;
   margin: 0;
+  box-sizing: border-box;
+  font-family: 'Days One';
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -7,7 +31,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.loading {
+  color: orange;
+  text-align: center;
+  padding-top: 5rem;
+  font-size: 2rem;
+}
+
+.material-icons {
+  font-family: 'Material Symbols Outlined';
 }
