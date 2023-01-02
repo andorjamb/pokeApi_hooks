@@ -4,11 +4,14 @@
 :root {
 
   --royal-purple: rgb(69, 27, 80);
+  --indigo: rgb(33, 12, 53);
   --deep-red: rgb(63, 3, 32);
   --burnt-orange: rgb(255, 106, 0);
   --eggplant: rgb(33, 12, 53);
   --yellow: rgb(247, 224, 52);
   --main-background-color: rgb(245, 245, 245);
+  --faded-eggplant: rgba(33, 12, 53, 0.5);
+
 
 }
 

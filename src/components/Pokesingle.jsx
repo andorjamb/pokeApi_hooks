@@ -6,32 +6,38 @@ import axios from 'axios';
 
 const Pokesingle = () => {
     const params = useParams();
-    const [data, setData] = useState([]);
-    const [isLoading, setIsLoading] = useState(false);
+    const [data, setData] = useState();
+    const [isLoading, setIsLoading] = useState(true);
 
     function nextPokemon() {
         console.log('clicked');
     }
 
     useEffect(() => {
-        setIsLoading(true);
+        console.log(params.pokesingle);
         axios
             .get(`https://pokeapi.co/api/v2/pokemon/${params.pokesingle}`)
-            .then((res) => {
+            .then(res => {
                 setData(res.data);
-                setIsLoading(true)
+                setIsLoading(false);
             });
+
+
     }, []);
 
-    return (
-        isLoading ?
-            <p className={classes.loading}>Loading...</p>
 
-            :
+
+    if (isLoading) {
+        return <p className={classes.loading}>Loading...</p>
+    }
+    if (data != null) {
+        return (
 
             <div className={classes.pokesingle}>
                 <div className={classes.container}>
-                    <div className={classes.pokesingleImg}> <img src={data.sprites?.other['official-artwork'].front_default} alt={data.name}></img>  </div>
+                    <div className={classes.pokesingleImg}>
+                        <img src={data.sprites.other['official-artwork'].front_default} alt={data.name} />
+                    </div>
 
                     <div className={classes.info}>
                         <table>
@@ -47,9 +53,10 @@ const Pokesingle = () => {
 
                 </div>
 
-                <button onClick={nextPokemon}><span className="material-icons">double_arrow</span></button>
+                {/*   <button onClick={nextPokemon}><span className="material-icons">double_arrow</span></button> */}
             </div>
-    );
+        );
+    }
 };
 
 

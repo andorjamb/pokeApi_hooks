@@ -2,8 +2,9 @@
     height: 200px;
     display: flex;
     flex-direction: column;
-    background-color: rgb(69, 27, 80);
-    margin-top: 0;
+    background-color: var(--royal-purple);
+
+
 }
 
 .title {

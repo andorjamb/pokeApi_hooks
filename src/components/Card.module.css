@@ -1,12 +1,17 @@
 .card {
     height: 290px;
     width: 200px;
-    box-shadow: 0 0 3px darkgray;
+    box-shadow: 0 0 2px var(--indigo), 0 0 6px var(--burnt-orange), 0 0 7px var(--yellow), 0 0 11px white;
     text-align: center;
     padding: 0.5rem;
     border-radius: 30px;
+    background-color: rgb(240, 240, 240);
+    opacity: 1;
+}
+
+.card:hover {
     background-color: white;
-    opacity: 0.8;
+
 }
 
 .card img {
@@ -17,13 +22,21 @@
     opacity: 1;
 }
 
+.card img:hover {
+    transform: scale(1.1);
+}
+
 h3 {
     margin: 0.3rem, 0;
 
 }
 
-a {
+.seeMore {
     color: orange;
-    margin-top: 1rem;
     font-weight: 800;
+}
+
+.seeMore:hover {
+    transform: scale(1.5, 1.5);
+    color: var(--royal-purple);
 }

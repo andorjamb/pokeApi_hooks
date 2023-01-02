@@ -9,7 +9,7 @@ const Card = ({ image, name }) => {
         <div className={classes.card}>
             <img src={image} alt={name}></img>
             <h3>{name}</h3>
-            <Link to={`${name}`}>See more</Link> 
+            <Link className={classes.seeMore} to={`${name}`}>See more</Link> 
         </div>
 
 
