@@ -4,7 +4,7 @@ import Card from '../components/Card';
 import axios from 'axios';
 import classes from './Pokemons.module.css'
 
-//change so that it fetches only name and image, not all the data
+
 const Pokemons = () => {
     const [data, setData] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
@@ -27,11 +27,16 @@ const Pokemons = () => {
     }, [])
 
     return (
-        <div className={classes.cards}>
-            {data.map((card) => (
-                <Card key={card.name} name={card.name}
-                    image={card.sprites.other['official-artwork'].front_default} />))}
-        </div>
+        isLoading ? <p className='loading'>Loading ...</p>
+
+            :
+            <div className={classes.pokemonsMain}>
+            <div className={classes.cards}>
+                {data.map((card) => (
+                    <Card key={card.name} name={card.name}
+                        image={card.sprites.other['official-artwork'].front_default} />))}
+            </div>
+            </div>
     );
 
 

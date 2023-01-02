@@ -9,7 +9,7 @@ const Card = ({ image, name }) => {
         <div className={classes.card}>
             <img src={image} alt={name}></img>
             <h3>{name}</h3>
-            <Link to={`${name}`}>See more</Link> {/* template strings are used here to ensure the data passed is a string */}
+            <Link to={`${name}`}>See more</Link> 
         </div>
 
 
