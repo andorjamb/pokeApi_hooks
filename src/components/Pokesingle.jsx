@@ -14,7 +14,6 @@ const Pokesingle = () => {
     }
 
     useEffect(() => {
-        console.log(params.pokesingle);
         axios
             .get(`https://pokeapi.co/api/v2/pokemon/${params.pokesingle}`)
             .then(res => {
@@ -41,14 +40,14 @@ const Pokesingle = () => {
 
                     <div className={classes.info}>
                         <table>
-                            <tr>
-                                <th>Name:</th><td>{data.name.charAt(0).toUpperCase() + data.name.slice(1)}</td>
-                            </tr>
-                            <tr><th>Id:</th><td>{data.id}</td></tr>
-                            <tr><th>Types:</th><td><ul>{data.types.map((type) => <li>{type.type.name}</li>)}</ul></td></tr>
-                            <tr><th>Weight:</th><td>{data.weight}</td></tr>
-                            <tr><th>Order:</th><td>{data.order}</td></tr>
-                        </table></div>
+                            <tbody>
+                                <tr><td>Name:</td><td>{data.name.charAt(0).toUpperCase() + data.name.slice(1)}</td>
+                                </tr>
+                                <tr><td>Id:</td><td>{data.id}</td></tr>
+                                <tr><td>Types:</td><td><ul>{data.types.map((type) => <li key={type.type.name}>{type.type.name}</li>)}</ul></td></tr>
+                                <tr><td>Weight:</td><td>{data.weight}</td></tr>
+                                <tr><td>Order:</td><td>{data.order}</td></tr>
+                            </tbody></table></div>
 
 
                 </div>
