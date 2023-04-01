@@ -1,6 +1,5 @@
-#!/usr/bin/env groovy
 pipeline {
-  agent any
+  agent {node}
   stages {
     stage('Pre-cleanup') {
       steps {
