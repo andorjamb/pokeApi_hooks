@@ -1,15 +1,13 @@
 pipeline {
-  agent any
+  agent {
+      node {
+      label 'node'
+    }
+  }
   stages {
     stage('Pre-cleanup') {
       steps {
         sh 'rm -rf ./node_modules'
-      }
-    }
-    stage('Install dependencies') {
-      steps {
-        sh '.  npm install'
-
       }
     }
     stage('Run tests') {
