@@ -3,7 +3,7 @@ pipeline {
   agent any
   stages {
     stage('Pre-cleanup') {
-      steps { d
+      steps {
         sh 'rm -rf ./node_modules'
       }
     }
