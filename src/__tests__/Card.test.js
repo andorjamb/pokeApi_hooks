@@ -1,9 +1,10 @@
 import { cleanup, render, screen } from '@testing-library/react';
 import Card from '../components/Card';
+import ditto from '../../ditto.png';
 
 afterEach(cleanup);
 
-const image = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/132.png";
+const image = ditto;
 
 const name = "ditto";
 
