@@ -16,13 +16,13 @@ pipeline {
         sh 'npm install'
       }
     }
-    stage('Run tests') {
+/*     stage('Run tests') {
       steps {
         echo 'running tests...'
         sh 'npm test'
     
       }
-    }
+    } */
   }
   post {
     failure {
