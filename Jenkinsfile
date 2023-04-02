@@ -1,9 +1,7 @@
 pipeline {
-  agent {
-      node {
-      label 'node'
-    }
-  }
+  agent any
+  tools {nodejs "Node"}
+
   stages {
     stage('Pre-cleanup') {
       steps {
@@ -11,8 +9,17 @@ pipeline {
     
       }
     }
+    stage('build'){
+      steps {
+        echo 'running build stage, install packages'
+        sh 'node --version'
+        sh 'npm install'
+      }
+    }
     stage('Run tests') {
       steps {
+        echo 'running tests...'
+        sh 'npm test'
     
       }
     }
